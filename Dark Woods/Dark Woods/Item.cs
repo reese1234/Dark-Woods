@@ -54,6 +54,10 @@ namespace Dark_Woods
                         Game.Message($"({Game.Alphabet[i]}) {enemy.Name}: {enemy.Health}/{enemy.MaxHealth}");
                         i++;
                     }
+                    // Yours truly
+                    string Selection = Console.ReadLine().ToUpper();
+                    Data.Foes[Array.IndexOf(Game.Alphabet, Selection)].Health -= attack;
+                    // Have fun with it!
                     
                 }
             }
