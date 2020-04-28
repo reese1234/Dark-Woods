@@ -58,10 +58,10 @@ namespace Dark_Woods
                     Console.ForegroundColor = ConsoleColor.Green;
                     string Selection = Console.ReadLine().ToUpper();
                     Console.ForegroundColor = ConsoleColor.White;
-                    Data.Foes[Array.IndexOf(Game.Alphabet, Selection)].Health -= attack;
-                    // Say how much health - Hoppy: 5/5
 
-                    // Thanks!
+                    Enemy currentEnemy = Data.Foes[Array.IndexOf(Game.Alphabet, Selection)];
+                    currentEnemy.Health -= attack;
+                    Console.WriteLine($"{currentEnemy.Health}/{currentEnemy.MaxHealth}");
                 }
             }
             else
